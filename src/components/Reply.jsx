@@ -15,10 +15,14 @@ export const Reply = ({ userImagePath, username, replyText, likeNum }) => {
         <span className="fw-semibold">{username}</span>
         <br />
         <span>{replyText}</span>
-        <div className="d-flex align-items-center gap-1">
-          <img src="/like.svg" width={20}></img>
-          <span className="text-muted">{likeNum} คน</span>
-        </div>
+        {likeNum === 0 ? (
+          ""
+        ) : (
+          <div className="d-flex align-items-center gap-1">
+            <img src="/like.svg" width={20}></img>
+            <span className="text-muted">{likeNum} คน</span>
+          </div>
+        )}
       </div>
     </div>
   );
