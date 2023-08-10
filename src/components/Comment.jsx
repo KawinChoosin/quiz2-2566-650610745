@@ -25,12 +25,11 @@ export const Comment = ({
           <span className="fw-semibold">{username}</span>
           <br />
           <span>{commentText}</span>
-          {parseInt({ likeNum }) > 0 && (
-            <div className="d-flex align-items-center gap-1">
-              <img src="/like.svg" width={20}></img>
-              <span className="text-muted">{likeNum} คน</span>
-            </div>
-          )}
+
+          <div className="d-flex align-items-center gap-1">
+            <img src="/like.svg" width={20}></img>
+            <span className="text-muted">{likeNum} คน</span>
+          </div>
         </div>
       </div>
       <span>{comments.username}</span>
